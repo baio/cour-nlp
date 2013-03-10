@@ -11,7 +11,7 @@ namespace h1_cs
         static void Main(string[] args)
         {
             NGram ngram = new NGram("../../App_Data/gene.train", 3);
-            var res = ngram.Train();
+            var res = ngram.Train("../../App_Data/gene.count");
 
             foreach (var r in res.Tags)
             {

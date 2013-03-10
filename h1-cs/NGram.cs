@@ -44,20 +44,28 @@ namespace h1_cs
 
         private void HandleTags(IEnumerable<NGramTaggedWord> SentenceTags)
         {
-            var spt = Enumerable.Repeat(START_TAG, n - 1).Concat(SentenceTags.Select(p => p.tag));
+            for (var i = 1; i <= n; i++)
+            { 
+                HandleTagsN(SentenceTags, i);
+            }
+        }
+
+        private void HandleTagsN(IEnumerable<NGramTaggedWord> SentenceTags, int N)
+        {
+            var spt = Enumerable.Repeat(START_TAG, N - 1).Concat(SentenceTags.Select(p => p.tag));
             
-            if (n > 1)
+            if (N > 1)
                 spt = spt.Concat(new[] { STOP_TAG });
 
-            for (var i = 0; i < spt.Count() - n + 1; i++)
+            for (var i = 0; i < spt.Count() - N + 1; i++)
             {
-                var s = spt.Skip(i).Take(n);
+                var s = spt.Skip(i).Take(N);
 
                 IncDict(_ngrams, string.Join(" ", s));
             }           
         }
 
-        public NGramCount Train()
+        public NGramCount Train(string OutFile = null)
         {
             var tags = new List<NGramTaggedWord>();
 
@@ -70,6 +78,7 @@ namespace h1_cs
             {
                 if (string.IsNullOrEmpty(line))
                 {
+                    //construct ngram for particular sentence
                     HandleTags(tags);
 
                     //new sentence
@@ -86,11 +95,20 @@ namespace h1_cs
                 }
             }
 
-            return new NGramCount
+            var res = new NGramCount
             {
                 Emission = _emission.Select((kvp) => new NGramEmission { word = kvp.Key, count = kvp.Value }).ToArray(),
                 Tags = _ngrams.Select((kvp) => new NGramTag {  tags = kvp.Key, count = kvp.Value }).ToArray()
             };
+
+            if (!string.IsNullOrEmpty(OutFile))
+            { 
+                File.WriteAllLines(OutFile, 
+                    res.Emission.Select(p => string.Format("{0} WORDTAG {1} {2}", p.count, p.word.tag, p.word.word)).Concat(
+                    res.Tags.Select(p => string.Format("{0} {1}-GRAM {2}", p.count, p.tags.Split(new [] {' '}, StringSplitOptions.RemoveEmptyEntries).Count(), p.tags))));
+            }
+
+            return res;
         }
     }
 
@@ -133,6 +151,6 @@ namespace h1_cs
     {
         public NGramEmission[] Emission { get; set; }
 
-        public NGramTag[] Tags;
+        public NGramTag[] Tags { get; set; }
     }
 }
