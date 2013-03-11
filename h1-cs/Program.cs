@@ -10,15 +10,18 @@ namespace h1_cs
     {
         static void Main(string[] args)
         {
+            
+            /*
+            var outFile = "../../App_Data/gene.r.count";
             NGram ngram = new NGram("../../App_Data/gene.train", 3);
-            var res = ngram.Train("../../App_Data/gene.count");
+            var res = ngram.Train();
+            NGram.RelpaceRare(res);
+            NGram.WriteToFile(outFile, res);
+             */
+             
 
-            foreach (var r in res.Tags)
-            {
-                Console.WriteLine(string.Format("{0} : {1}", r.tags, r.count));
-            }
-
-            Console.ReadLine();
+            var res = NGramTagger.Read("../../App_Data/gene.r.count");
+            NGramTagger.Tag("../../App_Data/gene.test", res, "../../App_Data/gene_test.p1.out");
 
         }
     }

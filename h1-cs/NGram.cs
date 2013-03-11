@@ -102,13 +102,25 @@ namespace h1_cs
             };
 
             if (!string.IsNullOrEmpty(OutFile))
-            { 
-                File.WriteAllLines(OutFile, 
-                    res.Emission.Select(p => string.Format("{0} WORDTAG {1} {2}", p.count, p.word.tag, p.word.word)).Concat(
-                    res.Tags.Select(p => string.Format("{0} {1}-GRAM {2}", p.count, p.tags.Split(new [] {' '}, StringSplitOptions.RemoveEmptyEntries).Count(), p.tags))));
+            {
+                WriteToFile(OutFile, res);
             }
 
             return res;
+        }
+
+        public static void RelpaceRare(NGramCount NGramCount, int RareCount = 5, string RareStr = "_RARE_")
+        {
+            var rareCnt = NGramCount.Emission.Where(p => p.count < RareCount).GroupBy(p => p.word.tag);
+            NGramCount.Emission = NGramCount.Emission.Where(p => p.count >= RareCount).Concat(
+                rareCnt.Select(p => new NGramEmission { count = p.Sum(s => s.count), word = new NGramTaggedWord(RareStr, p.Key) })).ToArray();
+        }
+
+        public static void WriteToFile(string FileName, NGramCount NGramCount)
+        {
+            File.WriteAllLines(FileName,
+                NGramCount.Emission.Select(p => string.Format("{0} WORDTAG {1} {2}", p.count, p.word.tag, p.word.word)).Concat(
+                NGramCount.Tags.Select(p => string.Format("{0} {1}-GRAM {2}", p.count, p.tags.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Count(), p.tags))));        
         }
     }
 
@@ -145,6 +157,8 @@ namespace h1_cs
         public string tags;
 
         public int count;
+
+        public int n { get { return string.IsNullOrEmpty(tags) ? 0 : tags.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Count(); } }
     }
 
     public class NGramCount     

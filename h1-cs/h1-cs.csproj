@@ -42,13 +42,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NGram.cs" />
+    <Compile Include="NGramTagger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="App_Data\gene.test" />
+    <None Include="App_Data\gene_dev.p1.out" />
     <None Include="App_Data\gene.a.train" />
+    <None Include="App_Data\gene.count" />
+    <None Include="App_Data\gene.dev" />
+    <None Include="App_Data\gene.key" />
+    <None Include="App_Data\gene.r.count" />
     <None Include="App_Data\gene.train" />
+    <None Include="App_Data\gene_test.p1.out" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
