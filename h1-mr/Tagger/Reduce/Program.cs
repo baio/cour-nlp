@@ -11,6 +11,10 @@ namespace Map
 {
     class Program
     {
+        /*
+         * gene.maped -> gene.reduced
+         * ..\..\App_Data\gene.maped ..\..\App_Data\gene.reduced ..\..\App_Data\gene.trained
+         */
         static void Main(string[] args)
         {
             int nGramCount = 3;

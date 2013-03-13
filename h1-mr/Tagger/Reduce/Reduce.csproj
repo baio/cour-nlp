@@ -46,12 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="App_Data\gene.hadoop.dev" />
-    <None Include="App_Data\gene.key" />
-    <None Include="App_Data\gene.reduce" />
-    <None Include="App_Data\gene.reduce.dev" />
-    <None Include="App_Data\gene.reduce.dev.fmt" />
-    <None Include="App_Data\gene.reduce.result" />
+    <None Include="App_Data\gene.maped" />
+    <None Include="App_Data\gene.reduced" />
+    <None Include="App_Data\gene.trained" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Utils\Utils.csproj">

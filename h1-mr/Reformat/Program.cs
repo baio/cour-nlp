@@ -10,7 +10,21 @@ namespace Reformat
     class Program
     {
         private const string OUTPUT_WORD_SEPARATOR = " ";
-        private const bool formatBack = true;
+
+        /*
+         * test - reforamat
+         * ..\..\App_Data\gene.test  ..\..\..\Tagger\Reduce\App_Data\gene.maped forward
+         * 
+         * dev - reforamat
+         * ..\..\App_Data\gene.dev  ..\..\..\Tagger\Reduce\App_Data\gene.maped forward
+         * 
+         * Tagger dev -> reforamat back  
+         * ..\..\..\Tagger\Reduce\App_Data\gene.reduced ..\..\..\..\h1\gene_dev.p1.out back
+         * 
+         * Tagger test -> reforamat back  
+         * ..\..\..\Tagger\Reduce\App_Data\gene.reduced ..\..\..\..\h1\gene_test.p1.out back
+         * 
+         */
 
         /// <summary>
         /// By default, hadoop divides sentences by new line, so format which given (new line divides separate words and empty string divide sentenes) doesn't fit here.
@@ -25,6 +39,7 @@ namespace Reformat
 
             Console.SetIn(new StreamReader(args[0]));
             Console.SetOut(new StreamWriter(args[1]));
+            bool formatBack = args[2] == "back";
 
             string line;
             while ((line = Console.ReadLine()) != null)

@@ -49,6 +49,7 @@
     <None Include="App_Data\gene.dev" />
     <None Include="App_Data\gene.hadoop.dev" />
     <None Include="App_Data\gene.hadoop.train" />
+    <None Include="App_Data\gene.test" />
     <None Include="App_Data\gene.train" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
