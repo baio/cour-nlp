@@ -20,14 +20,14 @@ namespace Map
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            if (args.Length < 3)
-            {
-                return;
-            }
+            int nGramCount = 3;
 
-            Console.SetIn(new StreamReader(args[0]));
-            Console.SetOut(new StreamWriter(args[1]));
-            int nGramCount = int.Parse(args[2]);
+            if (args.Length > 0)
+            {
+                Console.SetIn(new StreamReader(args[0]));
+                Console.SetOut(new StreamWriter(args[1]));
+                nGramCount = int.Parse(args[2]);
+            }
             
             var counters = new Dictionary<string, int>();
             var tags = new List<string>();

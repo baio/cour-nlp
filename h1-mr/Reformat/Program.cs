@@ -9,6 +9,9 @@ namespace Reformat
 {
     class Program
     {
+        private const string OUTPUT_WORD_SEPARATOR = " ";
+        private const bool formatBack = true;
+
         /// <summary>
         /// By default, hadoop divides sentences by new line, so format which given (new line divides separate words and empty string divide sentenes) doesn't fit here.
         /// Let's reformat given train file to known for hadoop.
@@ -26,14 +29,26 @@ namespace Reformat
             string line;
             while ((line = Console.ReadLine()) != null)
             {
-                if (line == string.Empty)
+                if (!formatBack)
                 {
-                    Console.Write("\n");
+                    if (line == string.Empty)
+                    {
+                        Console.Write("\n");
+                    }
+                    else
+                    {
+                        Console.Write(line);
+                        Console.Write(OUTPUT_WORD_SEPARATOR);
+                    }
                 }
                 else
                 {
-                    Console.Write(line);
-                    Console.Write("\t");
+                    foreach (var word in line.Split(new[] { '\t' }, StringSplitOptions.RemoveEmptyEntries))
+                    {
+                        Console.WriteLine(word);
+                    }
+
+                    Console.WriteLine();
                 }
             }
 

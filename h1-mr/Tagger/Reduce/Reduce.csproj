@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1970E67B-38F6-4381-9FFA-F7505445E587}</ProjectGuid>
+    <ProjectGuid>{3FD60C3C-B7F8-438D-8AF7-85E50BF44DE6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Reformat</RootNamespace>
-    <AssemblyName>Reformat</AssemblyName>
+    <RootNamespace>Tagger.Reduce</RootNamespace>
+    <AssemblyName>Map</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,10 +46,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="App_Data\gene.dev" />
     <None Include="App_Data\gene.hadoop.dev" />
-    <None Include="App_Data\gene.hadoop.train" />
-    <None Include="App_Data\gene.train" />
+    <None Include="App_Data\gene.key" />
+    <None Include="App_Data\gene.reduce" />
+    <None Include="App_Data\gene.reduce.dev" />
+    <None Include="App_Data\gene.reduce.dev.fmt" />
+    <None Include="App_Data\gene.reduce.result" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utils\Utils.csproj">
+      <Project>{1f99efec-0d6c-4001-a2f4-16f8619fc068}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
