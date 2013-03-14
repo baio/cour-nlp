@@ -9,14 +9,15 @@ namespace Reformat
 {
     class Program
     {
-        private const string OUTPUT_WORD_SEPARATOR = " ";
-
         /*
          * test - reforamat
          * ..\..\App_Data\gene.test  ..\..\..\Tagger\Reduce\App_Data\gene.maped forward
          * 
+         * key - reforamat
+         * ..\..\App_Data\gene.key  ..\..\..\Scorer\App_Data\gene.key.data forward
+         * 
          * dev - reforamat
-         * ..\..\App_Data\gene.dev  ..\..\..\Tagger\Reduce\App_Data\gene.maped forward
+         * ..\..\App_Data\gene.dev  ..\..\..\Tagger\Reduce\App_Data\gene.dev.data forward \s
          * 
          * Tagger dev -> reforamat back  
          * ..\..\..\Tagger\Reduce\App_Data\gene.reduced ..\..\..\..\h1\gene_dev.p1.out back
@@ -40,6 +41,10 @@ namespace Reformat
             Console.SetIn(new StreamReader(args[0]));
             Console.SetOut(new StreamWriter(args[1]));
             bool formatBack = args[2] == "back";
+            string outputWordSeparator = args[3];
+
+            if (outputWordSeparator == @"\s")
+                outputWordSeparator = " ";
 
             string line;
             while ((line = Console.ReadLine()) != null)
@@ -53,7 +58,7 @@ namespace Reformat
                     else
                     {
                         Console.Write(line);
-                        Console.Write(OUTPUT_WORD_SEPARATOR);
+                        Console.Write(outputWordSeparator);
                     }
                 }
                 else

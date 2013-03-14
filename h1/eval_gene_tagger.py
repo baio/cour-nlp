@@ -195,7 +195,7 @@ class Evaluator(object):
         Output a table with accuracy, precision, recall and F1 score. 
         """
 
-        print "Found %i GENEs. Expected %i GENEs; Correct: %i.\n" % (self.tp + self.fp, self.tp + self.fn, self.tp)
+        print "Found %i GENEs. Expected %i GENEs; Correct: %i. Total %i\n" % (self.tp + self.fp, self.tp + self.fn, self.tp, self.tp + self.fp + self.tn + self.fn)
 
 
         if self.tp + self.tn + self.fp + self.fn == 0: # There was nothing to do.
@@ -216,7 +216,7 @@ class Evaluator(object):
             rec = self.tp / float(self.tp + self.fn)
 
         print "\t precision \trecall \t\tF1-Score"
-        fscore = (2*prec*rec)/(prec+rec)
+        #fscore = (2*prec*rec)/(prec+rec)
         #print "Total:\t %f\t%f\t%f" % (prec, rec, fscore)
         for c in self.ne_classes:
             c_tp = self.class_counts[c].tp

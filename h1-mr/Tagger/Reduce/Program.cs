@@ -14,6 +14,9 @@ namespace Map
         /*
          * gene.maped -> gene.reduced
          * ..\..\App_Data\gene.maped ..\..\App_Data\gene.reduced ..\..\App_Data\gene.trained
+         * 
+         * gene.dev.data -> gene.dev.out
+         * ..\..\App_Data\gene.dev.data ..\..\App_Data\gene.dev.out ..\..\App_Data\gene.trained
          */
         static void Main(string[] args)
         {

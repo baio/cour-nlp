@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Map", "WordsCount\Map\Map.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reduce", "WordsCount\Reduce\Reduce.csproj", "{473A8209-C7F1-4B0A-9D2F-CF6FF61A2997}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorer", "Scorer\Scorer.csproj", "{ECF3B28E-0681-4C36-9A69-817D7D291401}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{473A8209-C7F1-4B0A-9D2F-CF6FF61A2997}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{473A8209-C7F1-4B0A-9D2F-CF6FF61A2997}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{473A8209-C7F1-4B0A-9D2F-CF6FF61A2997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF3B28E-0681-4C36-9A69-817D7D291401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF3B28E-0681-4C36-9A69-817D7D291401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF3B28E-0681-4C36-9A69-817D7D291401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF3B28E-0681-4C36-9A69-817D7D291401}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
