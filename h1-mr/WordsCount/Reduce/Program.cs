@@ -12,6 +12,10 @@ namespace Reduce
     {
         private const string RARE_WORD = "_RARE_";
 
+        /*
+         * ../../App_Data/gene.src.mapped ../../App_Data/gene.trained 5
+         */
+
         private static void Main(string[] args)
         {
             int rareWordsLimit = 5;
