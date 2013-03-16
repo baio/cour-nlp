@@ -5,7 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reformat", "Reformat\Reform
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A1FD527-84FE-4D19-B05E-27C7D1A5964E}"
 	ProjectSection(SolutionItems) = preProject
+		h1-p.2.pdf = h1-p.2.pdf
+		hmms-spring2013.pdf = hmms-spring2013.pdf
+		lectures_tagging.pdf = lectures_tagging.pdf
 		readme.md = readme.md
+		some.txt = some.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WordsCount", "WordsCount", "{2449D657-AA44-4C66-8466-25DA649ACEEF}"
@@ -21,6 +25,26 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reduce", "WordsCount\Reduce\Reduce.csproj", "{473A8209-C7F1-4B0A-9D2F-CF6FF61A2997}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorer", "Scorer\Scorer.csproj", "{ECF3B28E-0681-4C36-9A69-817D7D291401}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "py", "py", "{25C0A61E-8ED1-413B-997D-7ACFDE0E8F2E}"
+	ProjectSection(SolutionItems) = preProject
+		py_source\count_freqs.py = py_source\count_freqs.py
+		py_source\eval_gene_tagger.py = py_source\eval_gene_tagger.py
+		py_source\gene.a.counts = py_source\gene.a.counts
+		py_source\gene.a.train = py_source\gene.a.train
+		py_source\gene.counts = py_source\gene.counts
+		py_source\gene.dev = py_source\gene.dev
+		py_source\gene.dev.1 = py_source\gene.dev.1
+		py_source\gene.key = py_source\gene.key
+		py_source\gene.key.1 = py_source\gene.key.1
+		py_source\gene.test = py_source\gene.test
+		py_source\gene.train = py_source\gene.train
+		py_source\gene_dev.1.out = py_source\gene_dev.1.out
+		py_source\gene_dev.p1.out = py_source\gene_dev.p1.out
+		py_source\gene_test.p1.out = py_source\gene_test.p1.out
+		py_source\h1-p.2.pdf = py_source\h1-p.2.pdf
+		py_source\submit.py = py_source\submit.py
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +81,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{25C0A61E-8ED1-413B-997D-7ACFDE0E8F2E} = {2A1FD527-84FE-4D19-B05E-27C7D1A5964E}
 		{11D821DE-8B32-4323-A918-5F624FE66D2E} = {2449D657-AA44-4C66-8466-25DA649ACEEF}
 		{473A8209-C7F1-4B0A-9D2F-CF6FF61A2997} = {2449D657-AA44-4C66-8466-25DA649ACEEF}
 		{3FD60C3C-B7F8-438D-8AF7-85E50BF44DE6} = {FB570050-4AD6-42C3-AC7E-4BCCAED7A857}

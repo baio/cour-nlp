@@ -1,0 +1,18 @@
+﻿We've now corrected the videos on the Viterbi lectures to fix this bug (thanks again for catching it), and to match the note at http://www.cs.columbia.edu/~mcollins/notes-spring2013.html
+
+The new definitions are close to the old ones, but are now correct. We have
+
+π(0,∗,∗)=1
+as the base case, and the recursive case is now:
+
+For any k∈1…n, for any u∈Sk−1 and v∈Sk:
+
+π(k,u,v)=maxw∈Sk−2(π(k−1,w,u)×q(v|w,u)×e(xk|v))
+where Sk is defined to be the set of possible tags at position k: more precisely
+
+S−1=S0= {*}
+
+and
+
+Sk=S for k=1…n
+where S is the set of possible tags.
