@@ -43,13 +43,16 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WordsFilter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="App_Data\gene.dev.data" />
-    <None Include="App_Data\gene.dev.out" />
-    <None Include="App_Data\gene.maped" />
-    <None Include="App_Data\gene.reduced" />
+    <None Include="App_Data\gene.dev.trigram.out" />
+    <None Include="App_Data\gene.dev.unigram.out" />
+    <None Include="App_Data\gene.test.data" />
+    <None Include="App_Data\gene.test.trigram.out" />
+    <None Include="App_Data\gene.test.unigram.out" />
     <None Include="App_Data\gene.trained" />
   </ItemGroup>
   <ItemGroup>

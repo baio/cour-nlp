@@ -46,8 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="App_Data\gene.map" />
-    <None Include="App_Data\gene.reduce" />
+    <None Include="App_Data\gene.src.mapped" />
+    <None Include="App_Data\gene.trained" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Utils\Utils.csproj">

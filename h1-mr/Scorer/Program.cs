@@ -14,6 +14,9 @@ namespace Scorer
         /*
         * score
         * ..\..\App_Data\gene.dev.out ..\..\App_Data\gene.key.data I-GENE
+        * ..\..\App_Data\gene.dev.unigram.out ..\..\App_Data\gene.key.data I-GENE 
+        * ..\..\App_Data\gene.dev.trigram.out ..\..\App_Data\gene.key.data I-GENE 
+        * ..\..\App_Data\gene.test.trigram.out ..\..\App_Data\gene.key.data I-GENE 
         */
 
         static void Main(string[] args)

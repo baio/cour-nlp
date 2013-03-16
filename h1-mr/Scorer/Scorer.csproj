@@ -47,10 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="App_Data\gene.dev.1.out" />
-    <None Include="App_Data\gene.key.1.data" />
-    <None Include="App_Data\gene.dev.out" />
+    <None Include="App_Data\gene.dev.trigram.out" />
+    <None Include="App_Data\gene.dev.unigram.out" />
     <None Include="App_Data\gene.key.data" />
+    <None Include="App_Data\gene.test.trigram.out" />
+    <None Include="App_Data\gene.test.unigram.out" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

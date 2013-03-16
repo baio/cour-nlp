@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utils;
 
 namespace Map
 {
@@ -11,6 +12,10 @@ namespace Map
     {
         const string START_TAG = "*";
         const string STOP_TAG = "STOP";
+
+        /*
+         * ../../App_Data/gene.src ../../App_Data/gene.src.mapped 3
+         */
 
         /// <summary>
         /// Map 
@@ -29,7 +34,8 @@ namespace Map
                 nGramCount = int.Parse(args[2]);
             }
             
-            var counters = new Dictionary<string, int>();
+            var counters = new Dictionary();
+            var ngrams = new Dictionary();
             var tags = new List<string>();
 
             string line;
@@ -39,10 +45,7 @@ namespace Map
                 foreach (var wordTagPair in wordTagPairs)
                 {
                     //Words count
-                    if (!counters.ContainsKey(wordTagPair))
-                        counters.Add(wordTagPair, 1);
-                    else
-                        counters[wordTagPair]++;
+                    counters.AddSafely(wordTagPair, 1);
 
                     //Collect tags
                     tags.Add(wordTagPair.Split(' ')[1]);
@@ -53,12 +56,10 @@ namespace Map
                     Console.WriteLine(string.Format("{0} WORDTAG\t{1}", counter.Key, counter.Value));
                 }
 
-                //NGRAMS
-                var ngrams = new Dictionary<string, int>();
+                //NGRAMS                                
                 for (var i = 1; i <= nGramCount; i++)
                 {
                     var spt = Enumerable.Repeat(START_TAG, i - 1).Concat(tags);
-
                     
                     int iterCnt;
 
@@ -82,12 +83,18 @@ namespace Map
                         //move to the next tag and compose ngram of length i
                         var ngram = string.Join(" ", spt.Skip(k).Take(i));
 
-                        if (!ngrams.ContainsKey(ngram))
-                            ngrams.Add(ngram, 1);
-                        else
-                            ngrams[ngram]++;
+                        ngrams.AddSafely(ngram, 1);
                     }           
+
+                    //Add start sentence tags, will be needed for calculating probabilities in HMM
+                    if (i > 1)
+                    {
+                        var startSentenceTag = string.Join(" ", Enumerable.Repeat(START_TAG, i - 1));
+
+                        ngrams.AddSafely(startSentenceTag, 1);
+                    }
                 }
+
 
                 foreach (var ngram in ngrams)
                 {

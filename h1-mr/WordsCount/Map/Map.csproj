@@ -46,8 +46,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="App_Data\gene.hadoop.train" />
-    <None Include="App_Data\gene.map" />
+    <None Include="App_Data\gene.src" />
+    <None Include="App_Data\gene.src.mapped" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utils\Utils.csproj">
+      <Project>{1f99efec-0d6c-4001-a2f4-16f8619fc068}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -25,6 +25,9 @@ namespace Reformat
          * Tagger test -> reforamat back  
          * ..\..\..\Tagger\Reduce\App_Data\gene.reduced ..\..\..\..\h1\gene_test.p1.out back
          * 
+         * ..\..\App_Data\gene.test ..\..\App_Data\gene.test.data forward \s
+         * ..\..\App_Data\gene.test.unigram.out ..\..\App_Data\gene_test.p1.out back
+         * ..\..\App_Data\gene.test.trigram.out ..\..\App_Data\gene_test.p2.out back
          */
 
         /// <summary>
@@ -41,7 +44,8 @@ namespace Reformat
             Console.SetIn(new StreamReader(args[0]));
             Console.SetOut(new StreamWriter(args[1]));
             bool formatBack = args[2] == "back";
-            string outputWordSeparator = args[3];
+
+            string outputWordSeparator = args.Length > 3 ? args[3] : @"\s";
 
             if (outputWordSeparator == @"\s")
                 outputWordSeparator = " ";

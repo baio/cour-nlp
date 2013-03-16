@@ -20,6 +20,7 @@ namespace Scorer
 
         /// <summary>
         /// Probabilty of GEN, given word is O 
+        /// The number of correct results divided by the number of results that should have been returned.
         /// </summary>
         public double Recall
         {
@@ -28,6 +29,7 @@ namespace Scorer
 
         /// <summary>
         /// Probabilty of GEN, given word is O 
+        ///  The number of correct results divided by the number of all returned results.
         /// </summary>
         public double Precision
         {
