@@ -52,39 +52,61 @@ namespace Map
                 }
             }
 
-            var allPossibleTags = GetAllPossibleTags(trainedNGrams.Keys.ToArray()); 
+            var allPossibleTags = GetAllPossibleTags(trainedNGrams.Keys.ToArray());
 
+            //initialize start sentence n-grams
+            var allPossibleNgrams = allPossibleTags.SelectMany((tag) =>
+            {
+                return GetAllPossibleNgams(trainedNGrams.Keys.ToArray(), nGramCount, tag);
+            });
+
+            var pi_x_y_ini = allPossibleNgrams.Select(p => 
+                {
+
+                    //all start sentence probabilities must be null, except 'real' start sentences n-grams
+                    var cnt = 0;
+
+                    var spts = p.Split(' ');
+
+                    //confirm first n-1 tags in n-gram is a start sentence tag
+                    if (spts.Take(spts.Length - 1).All(s => s == "*"))
+                    {
+                        cnt = 1;
+                    }
+
+                    return new KeyValuePair<string, double>(p, cnt);
+                });
             
             string line;
             while ((line = Console.ReadLine()) != null)
             {
+                var pi_x_y = pi_x_y_ini.OrderBy(p => p.Key).ToArray();
+
                 foreach(var word in line.Split(new [] {' '}, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    /*
                     var wordsCount = allPossibleTags.Select((tag) =>
                     {                        
                         var wd = word + " " + tag;
 
                         if (!trainedWordsCount.ContainsKey(wd))
-                        { 
-                            wd = "_RARE_" + " " + tag;
+                        {
+                            return new KeyValuePair<string, int>(wd, 0);
                         }
-                        
-                        return trainedWordsCount.Single(s => s.Key == wd);                        
+                        else
+                        {
+                            return trainedWordsCount.Single(s => s.Key == wd);
+                        }
 
                     }).ToArray();
-                     */
-                    
-                    //Get [BACKGROUND O, 28] 
-                    var wordsCount = trainedWordsCount.GetSafely(word, 0);
 
-                    //If word doesn't in list of trained words, consider it is rare
-                    if (wordsCount.Count() == 0)
+                    
+                    if (wordsCount.Count(p => p.Value != 0) == 0)
                     {
+                        //this is a rare word (for this words doesn't exist any tag)
                         wordsCount = trainedWordsCount.GetSafely("_RARE_", 0);
                     }
 
-                    var e_x_y = wordsCount.SelectMany(p =>
+                    var p_x_y = wordsCount.SelectMany(p =>
                         {
                             //Get tag O
                             var tag = Dictionary.GetKeyPart(p.Key, 1);
@@ -92,8 +114,6 @@ namespace Map
                             var count_y_x = p.Value;
                             var count_y = trainedNGrams.GetSafely(tag);
 
-                            //Get list of all possible ngrams, ended with this tag
-                            //[* * O, * O O, I-GENE O O, ..., O, O, O]
                             var ngrams = GetAllPossibleNgams(trainedNGrams.Keys.ToArray(), nGramCount, tag);
 
                             return ngrams.Select((ngram) =>
@@ -102,19 +122,34 @@ namespace Map
 
                                 var ngram_perv = ngramSplits.Length == 1 ? ngramSplits[0] : string.Join(" ", ngramSplits.Take(ngramSplits.Length - 1));
 
+                                var ngram_nex = ngramSplits.Length == 1 ? null : string.Join(" ", ngramSplits.Skip(1));
+
                                 var ngram_count = trainedNGrams[ngram];
 
                                 var ngram_perv_count = trainedNGrams.GetSafely(ngram_perv);
 
-                                return new { ngram = ngram, tag = tag, e = (double)count_y_x / (double)count_y, q = ngram_count / (double)ngram_perv_count };
+                                return new { ngram = ngram, tag = tag, ngram_perv = ngram_perv, ngram_next = ngram_nex, e = (double)count_y_x / (double)count_y, q = ngram_count / (double)ngram_perv_count };
                             });
-                        }).ToArray();
+                        }).OrderBy(p => p.ngram).ToArray();
 
+                    /*
+                    var r_x_y = pi_x_y.Zip(p_x_y, (first, second) => new { pi = first, r = second });
+
+                    pi_x_y = r_x_y.Select(p => new KeyValuePair<string, double>(p.pi.Key, p.pi.Value * p.r.e * p.r.q)).ToArray();
+                    */
+                    foreach (var p in p_x_y.GroupBy(p => p.ngram_perv))
+                    {
+                        var pi = pi_x_y.Single(s => s.Key == p.Key);
+
+                        var max = p.OrderBy(s => pi.Value * s.q * s.e).First();
+                    }
+
+                    //shift n-gram
                     
-                    var max_e_x_y = e_x_y.OrderByDescending(p => p.e * p.q).First();
+                    //var max_e_x_y = p_x_y.OrderByDescending(p => p.e * p.q).First();
 
-                    Console.Write(string.Format("{0} {1}", word, max_e_x_y.tag));
-                    Console.Write("\t");
+                    //Console.Write(string.Format("{0} {1}", word, max_e_x_y.tag));
+                    //Console.Write("\t");
                 }
 
                 Console.Write("\n");

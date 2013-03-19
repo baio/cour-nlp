@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="App_Data\gene.dev.trigram.out" />
     <None Include="App_Data\gene.dev.unigram.out" />
     <None Include="App_Data\gene.key.data" />
     <None Include="App_Data\gene.test.trigram.out" />
