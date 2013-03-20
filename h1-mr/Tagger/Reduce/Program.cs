@@ -31,10 +31,11 @@ namespace Map
 
             nGramCount = int.Parse(args[3]);
 
-            foreach(var ln in File.ReadAllLines(args[2]))
+            //read trained n-grams and word counts from file, fill-up dictionary
+            foreach (var ln in File.ReadAllLines(args[2]))
             {
-                var kvp = ln.Split('\t');   
-                    
+                var kvp = ln.Split('\t');
+
                 var srcKey = kvp[0];
                 var srcVal = kvp[1];
 
@@ -52,125 +53,133 @@ namespace Map
                 }
             }
 
-            var allPossibleTags = GetAllPossibleTags(trainedNGrams.Keys.ToArray());
+            var S = trainedNGrams.Keys.ToArray().SelectMany(p => p.Split(' ')).Distinct().Where(p => p != "*" && p != "STOP").ToArray();
 
-            //initialize start sentence n-grams
-            var allPossibleNgrams = allPossibleTags.SelectMany((tag) =>
-            {
-                return GetAllPossibleNgams(trainedNGrams.Keys.ToArray(), nGramCount, tag);
-            });
-
-            var pi_x_y_ini = allPossibleNgrams.Select(p => 
-                {
-
-                    //all start sentence probabilities must be null, except 'real' start sentences n-grams
-                    var cnt = 0;
-
-                    var spts = p.Split(' ');
-
-                    //confirm first n-1 tags in n-gram is a start sentence tag
-                    if (spts.Take(spts.Length - 1).All(s => s == "*"))
-                    {
-                        cnt = 1;
-                    }
-
-                    return new KeyValuePair<string, double>(p, cnt);
-                });
-            
             string line;
             while ((line = Console.ReadLine()) != null)
             {
-                var pi_x_y = pi_x_y_ini.OrderBy(p => p.Key).ToArray();
+                var words = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
 
-                foreach(var word in line.Split(new [] {' '}, StringSplitOptions.RemoveEmptyEntries))
+                var pi_k_1_w_u = new Dictionary<string, double> { { "* *", 1 } };
+                var bp = new List<Dictionary<string, string>>();
+
+                for (var k = 0; k < words.Length; k++)
                 {
-                    var wordsCount = allPossibleTags.Select((tag) =>
-                    {                        
-                        var wd = word + " " + tag;
+                    string word = words[k];
+                    string[] S_k = null;
+                    string[] S_k_1 = null;
 
-                        if (!trainedWordsCount.ContainsKey(wd))
-                        {
-                            return new KeyValuePair<string, int>(wd, 0);
-                        }
-                        else
-                        {
-                            return trainedWordsCount.Single(s => s.Key == wd);
-                        }
-
-                    }).ToArray();
-
-                    
-                    if (wordsCount.Count(p => p.Value != 0) == 0)
+                    if (k == 0)
                     {
-                        //this is a rare word (for this words doesn't exist any tag)
-                        wordsCount = trainedWordsCount.GetSafely("_RARE_", 0);
+                        S_k = S_k_1 = new[] { "*" };
+                    }
+                    else if (k == 1)
+                    {
+                        S_k = S.ToArray();
+                        S_k_1 = new[] { "*" };
+                    }
+                    else
+                    {
+                        S_k = S_k_1 = S.ToArray();
                     }
 
-                    var p_x_y = wordsCount.SelectMany(p =>
+                    var pi_k_u_v = new Dictionary<string, double>();
+
+                    bp.Add(new Dictionary<string, string>());
+                    
+                    foreach (var u in S_k)
+                    {
+                        foreach (var v in S)
                         {
-                            //Get tag O
-                            var tag = Dictionary.GetKeyPart(p.Key, 1);
+                            var pi_k_tmp = new Dictionary<string, double>();
 
-                            var count_y_x = p.Value;
-                            var count_y = trainedNGrams.GetSafely(tag);
-
-                            var ngrams = GetAllPossibleNgams(trainedNGrams.Keys.ToArray(), nGramCount, tag);
-
-                            return ngrams.Select((ngram) =>
+                            foreach (var w in S_k_1)
                             {
-                                var ngramSplits = ngram.Split(' ');
+                                var ngram = w + " " + u + " " + v;
+                                var ngram_1 = w + " " + u;
 
-                                var ngram_perv = ngramSplits.Length == 1 ? ngramSplits[0] : string.Join(" ", ngramSplits.Take(ngramSplits.Length - 1));
+                                var cnt_word_y = trainedWordsCount.GetSafely(word + " " + v);
+                                var cnt_y = trainedWordsCount.GetCount(v, 1);
 
-                                var ngram_nex = ngramSplits.Length == 1 ? null : string.Join(" ", ngramSplits.Skip(1));
+                                if (cnt_word_y == null)
+                                {
+                                    if (trainedWordsCount.GetCount(word, 0) != 0)
+                                    {
+                                        //exist in dictionary
+                                        cnt_word_y = 0;
+                                    }
+                                    else
+                                    {
+                                        //not exist in dictionary => it is rare
+                                        cnt_word_y = trainedWordsCount.GetSafely("_RARE_ " + v);
+                                    }
+                                }
 
-                                var ngram_count = trainedNGrams[ngram];
+                                var q_v_w_u = (double)(trainedNGrams.GetSafely(ngram) / (double)trainedNGrams.GetSafely(ngram_1));
+                                var e_v = (double)(cnt_word_y / (double)cnt_y);
 
-                                var ngram_perv_count = trainedNGrams.GetSafely(ngram_perv);
+                                var p = pi_k_1_w_u[ngram_1] * q_v_w_u * e_v;
 
-                                return new { ngram = ngram, tag = tag, ngram_perv = ngram_perv, ngram_next = ngram_nex, e = (double)count_y_x / (double)count_y, q = ngram_count / (double)ngram_perv_count };
-                            });
-                        }).OrderBy(p => p.ngram).ToArray();
+                                pi_k_tmp.Add(w, p);
+                            }
 
-                    /*
-                    var r_x_y = pi_x_y.Zip(p_x_y, (first, second) => new { pi = first, r = second });
+                            var max_w = pi_k_tmp.OrderByDescending(p => p.Value).First();
 
-                    pi_x_y = r_x_y.Select(p => new KeyValuePair<string, double>(p.pi.Key, p.pi.Value * p.r.e * p.r.q)).ToArray();
-                    */
-                    foreach (var p in p_x_y.GroupBy(p => p.ngram_perv))
-                    {
-                        var pi = pi_x_y.Single(s => s.Key == p.Key);
+                            pi_k_u_v.Add(u + " " + v, max_w.Value);
 
-                        var max = p.OrderBy(s => pi.Value * s.q * s.e).First();
+                            bp.Last().Add(u + " " + v, max_w.Key);
+                        }
                     }
 
-                    //shift n-gram
-                    
-                    //var max_e_x_y = p_x_y.OrderByDescending(p => p.e * p.q).First();
+                    pi_k_1_w_u = pi_k_u_v;
 
-                    //Console.Write(string.Format("{0} {1}", word, max_e_x_y.tag));
-                    //Console.Write("\t");
+
+                    if (words.Length - 1 == k)
+                    {
+                        var tags = new string[words.Length];
+
+                        double max_p = 0;
+                        //Last word
+                        foreach (var u in S_k)
+                        {
+                            foreach (var v in S)
+                            {
+                                var ngram = u + " " + v + " STOP";
+                                var ngram_1 = u + " " + v;
+
+                                var q_stop = (double)(trainedNGrams.GetSafely(ngram) / (double)trainedNGrams.GetSafely(ngram_1));
+                                var p = q_stop * pi_k_u_v[ngram_1];
+
+                                if (max_p < p)
+                                {
+                                    max_p = p;
+                                    tags[k] = v;
+                                    tags[k - 1] = u;
+                                }
+                            }
+                        }
+
+
+                        //backword iter
+                        for (int i = (k - 2); i != -1; i--)
+                        {
+                            var ptr = bp.ElementAt(i + 2);
+
+                            tags[i] = ptr[tags[i + 1] + " " + tags[i + 2]];
+                        }
+
+                        for (var n = 0; n < words.Length; n++)
+                        {
+                            Console.Write("{0} {1}", words[n], tags[n]);
+                            Console.Write("\t");
+                        }
+                    }
                 }
 
                 Console.Write("\n");
             }
 
             Console.Out.Close();
-        }
-
-        private static string[] GetAllPossibleTags(string[] NGramsList)
-        {
-            return NGramsList.SelectMany(p => p.Split(' ')).Distinct().Where(p => p != "*" && p != "STOP").ToArray();
-        }
-
-        private static string [] GetAllPossibleNgams(string [] NGramsList, int nGramCount, string LastTag)
-        {
-            return NGramsList.Where((p) =>
-                {
-                    var splits = p.Split(' ');
-
-                    return splits.Last() == LastTag && splits.Length == nGramCount;
-                }).ToArray();
         }
     }
 }

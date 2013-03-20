@@ -16,3 +16,5 @@ and
 
 Sk=S for k=1…n
 where S is the set of possible tags.
+
+https://class.coursera.org/nlangp-001/forum/thread?thread_id=321
