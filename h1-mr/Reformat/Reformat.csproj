@@ -46,16 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="App_Data\gene.dev" />
-    <None Include="App_Data\gene.dev.trigram.out" />
-    <None Include="App_Data\gene.dev.unigram.out" />
+    <None Include="App_Data\gene.dev.out" />
     <None Include="App_Data\gene.key" />
     <None Include="App_Data\gene.test" />
-    <None Include="App_Data\gene.test.data" />
-    <None Include="App_Data\gene.test.trigram.out" />
-    <None Include="App_Data\gene.test.unigram.out" />
-    <None Include="App_Data\gene_test.p1.out" />
-    <None Include="App_Data\gene_test.p2.out" />
+    <None Include="App_Data\gene.test.out" />
+    <None Include="App_Data\gene_dev.p2.out" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -12,14 +12,12 @@ namespace Map
     class Program
     {
         /*
-         * ..\..\App_Data\gene.dev.data ..\..\App_Data\gene.dev.unigram.out ..\..\App_Data\gene.trained 1
-         * ..\..\App_Data\gene.dev.data ..\..\App_Data\gene.dev.trigram.out ..\..\App_Data\gene.trained 3
+         * ..\..\App_Data\gene.dev.data ..\..\App_Data\gene.dev.out ..\..\App_Data\gene.trained
+         * ..\..\App_Data\gene.test.data ..\..\App_Data\gene.test.out ..\..\App_Data\gene.trained
          * 
          */
         static void Main(string[] args)
         {
-            int nGramCount = 3;
-
             var trainedWordsCount = new Dictionary();
             var trainedNGrams = new Dictionary();
 
@@ -28,8 +26,6 @@ namespace Map
                 Console.SetIn(new StreamReader(args[0]));
                 Console.SetOut(new StreamWriter(args[1]));
             }
-
-            nGramCount = int.Parse(args[3]);
 
             //read trained n-grams and word counts from file, fill-up dictionary
             foreach (var ln in File.ReadAllLines(args[2]))
@@ -118,7 +114,7 @@ namespace Map
                                 var q_v_w_u = (double)(trainedNGrams.GetSafely(ngram) / (double)trainedNGrams.GetSafely(ngram_1));
                                 var e_v = (double)(cnt_word_y / (double)cnt_y);
 
-                                var p = pi_k_1_w_u[ngram_1] * q_v_w_u * e_v;
+                                var p = pi_k_1_w_u[ngram_1] * q_v_w_u * e_v * 100;
 
                                 pi_k_tmp.Add(w, p);
                             }
