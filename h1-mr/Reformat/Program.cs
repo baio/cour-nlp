@@ -22,12 +22,10 @@ namespace Reformat
          * Tagger dev -> reforamat back  
          * ..\..\..\Tagger\Reduce\App_Data\gene.reduced ..\..\..\..\h1\gene_dev.p1.out back
          * 
-         * Tagger test -> reforamat back  
-         * ..\..\..\Tagger\Reduce\App_Data\gene.reduced ..\..\..\..\h1\gene_test.p1.out back
          * 
          * ..\..\App_Data\gene.test ..\..\App_Data\gene.test.data forward \s
-         * ..\..\App_Data\gene.test.unigram.out ..\..\App_Data\gene_test.p1.out back
-         * ..\..\App_Data\gene.test.trigram.out ..\..\App_Data\gene_test.p2.out back
+         * ..\..\App_Data\gene.dev.out ..\..\App_Data\gene_dev.p2.out back 
+         * 
          */
 
         /// <summary>

@@ -54,7 +54,7 @@ namespace Reduce
             
             //store pairs for rare words - tag : quanity
             var rareWordsCount = new Dictionary();
-            var wordsCountOrdered = wordsCount.OrderByDescending(p => p.Value);
+            var wordsCountOrdered = wordsCount.OrderBy(p => p.Key).OrderByDescending(p => p.Value);
             foreach (var wordCount in wordsCountOrdered)
             {
                 if (wordCount.Value >= rareWordsLimit)
@@ -73,7 +73,7 @@ namespace Reduce
                 Console.WriteLine(string.Format("{1} {2} WORDTAG\t{0}", rareWordCount.Value, RARE_WORD, rareWordCount.Key));
             }
 
-            foreach (var ngramCount in ngramsCount.OrderByDescending(p => p.Value))
+            foreach (var ngramCount in ngramsCount.OrderBy(p => p.Key).OrderByDescending(p => p.Value))
             {
                 Console.WriteLine(string.Format("{2} {1}-GRAM\t{0}", ngramCount.Value, ngramCount.Key.Split(new[] { ' ' }).Count(), ngramCount.Key));
             }

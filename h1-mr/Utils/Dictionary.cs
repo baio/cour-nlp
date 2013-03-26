@@ -46,5 +46,11 @@ namespace Utils
                 this.Add(Key, Val);
             }
         }
+
+
+        public int GetCount(string Key, int KeyPart)
+        {
+            return this.Where(p => Dictionary.GetKeyPart(p.Key, KeyPart) == Key).Sum(p => p.Value);
+        }
     }
 }

@@ -16,3 +16,9 @@ and
 
 Sk=S for k=1…n
 where S is the set of possible tags.
+
+https://class.coursera.org/nlangp-001/forum/thread?thread_id=321
+
+rico: no, you calculate and store all the pi values all the way to the end of the sentence, then multiply the last ones by q(STOP|u,v) for each combination of (u,v) at the end to select the very best (highest pi*q) path for the very last two items before STOP. Only then do you progress back through the pi() tables selecting the best backpointers for the rest of the tags, in order from end to beginning of the sentence. (You go from k=n-2 to k=1, and at each step, you find the w,u,v that gives the best pi(k+2,u,v) where u and v are the first two tags in the so-far-constructed tag list. You then add w to the beginning of this list, and move toward the beginning of the sentence -> subtract 1 from k. Each pi(...) has a corresponding backpointer, of course.)
+
+You can do a limited amount of culling by avoiding storing instances of pi() whose e(x|v) is zero, and therefore avoiding later calculations that depend on that particular pi(). The extra code complexity might not be worth it.
