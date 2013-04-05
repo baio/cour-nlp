@@ -1,0 +1,116 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reformat", "Reformat\Reformat.csproj", "{1970E67B-38F6-4381-9FFA-F7505445E587}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A1FD527-84FE-4D19-B05E-27C7D1A5964E}"
+	ProjectSection(SolutionItems) = preProject
+		h1-p.2.pdf = h1-p.2.pdf
+		hmms-spring2013.pdf = hmms-spring2013.pdf
+		lectures_tagging.pdf = lectures_tagging.pdf
+		readme.md = readme.md
+		some.txt = some.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WordsCount", "WordsCount", "{2449D657-AA44-4C66-8466-25DA649ACEEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tagger", "Tagger", "{FB570050-4AD6-42C3-AC7E-4BCCAED7A857}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{1F99EFEC-0D6C-4001-A2F4-16F8619FC068}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reduce", "Tagger\Reduce\Reduce.csproj", "{3FD60C3C-B7F8-438D-8AF7-85E50BF44DE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Map", "WordsCount\Map\Map.csproj", "{11D821DE-8B32-4323-A918-5F624FE66D2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reduce", "WordsCount\Reduce\Reduce.csproj", "{473A8209-C7F1-4B0A-9D2F-CF6FF61A2997}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scorer", "Scorer\Scorer.csproj", "{ECF3B28E-0681-4C36-9A69-817D7D291401}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "py", "py", "{25C0A61E-8ED1-413B-997D-7ACFDE0E8F2E}"
+	ProjectSection(SolutionItems) = preProject
+		py_source\count_freqs.py = py_source\count_freqs.py
+		py_source\eval_gene_tagger.py = py_source\eval_gene_tagger.py
+		py_source\gene.a.counts = py_source\gene.a.counts
+		py_source\gene.a.train = py_source\gene.a.train
+		py_source\gene.counts = py_source\gene.counts
+		py_source\gene.dev = py_source\gene.dev
+		py_source\gene.dev.1 = py_source\gene.dev.1
+		py_source\gene.key = py_source\gene.key
+		py_source\gene.key.1 = py_source\gene.key.1
+		py_source\gene.test = py_source\gene.test
+		py_source\gene.train = py_source\gene.train
+		py_source\gene_dev.1.out = py_source\gene_dev.1.out
+		py_source\gene_dev.p1.out = py_source\gene_dev.p1.out
+		py_source\gene_test.p1.out = py_source\gene_test.p1.out
+		py_source\h1-p.2.pdf = py_source\h1-p.2.pdf
+		py_source\submit.py = py_source\submit.py
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{F729AB21-C0FB-4A66-9890-8A210E40C87A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recount", "Recount\Recount.csproj", "{680C81BD-6013-46AF-905A-AB1C05F9E2CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "py_projects", "py_projects", "{C05500B2-F371-4E5D-AA70-2C7558B2F238}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Eval", "py_source\Eval\Eval.pyproj", "{044DC480-0C16-4499-B542-0468D9957D5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLP", "NLP\NLP.csproj", "{98BBEF6A-2C89-41B9-80EC-328E52CCB643}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1970E67B-38F6-4381-9FFA-F7505445E587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1970E67B-38F6-4381-9FFA-F7505445E587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1970E67B-38F6-4381-9FFA-F7505445E587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1970E67B-38F6-4381-9FFA-F7505445E587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F99EFEC-0D6C-4001-A2F4-16F8619FC068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F99EFEC-0D6C-4001-A2F4-16F8619FC068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F99EFEC-0D6C-4001-A2F4-16F8619FC068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F99EFEC-0D6C-4001-A2F4-16F8619FC068}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FD60C3C-B7F8-438D-8AF7-85E50BF44DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD60C3C-B7F8-438D-8AF7-85E50BF44DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD60C3C-B7F8-438D-8AF7-85E50BF44DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD60C3C-B7F8-438D-8AF7-85E50BF44DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D821DE-8B32-4323-A918-5F624FE66D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D821DE-8B32-4323-A918-5F624FE66D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D821DE-8B32-4323-A918-5F624FE66D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D821DE-8B32-4323-A918-5F624FE66D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{473A8209-C7F1-4B0A-9D2F-CF6FF61A2997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{473A8209-C7F1-4B0A-9D2F-CF6FF61A2997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{473A8209-C7F1-4B0A-9D2F-CF6FF61A2997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{473A8209-C7F1-4B0A-9D2F-CF6FF61A2997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECF3B28E-0681-4C36-9A69-817D7D291401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF3B28E-0681-4C36-9A69-817D7D291401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF3B28E-0681-4C36-9A69-817D7D291401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF3B28E-0681-4C36-9A69-817D7D291401}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680C81BD-6013-46AF-905A-AB1C05F9E2CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680C81BD-6013-46AF-905A-AB1C05F9E2CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680C81BD-6013-46AF-905A-AB1C05F9E2CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680C81BD-6013-46AF-905A-AB1C05F9E2CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{044DC480-0C16-4499-B542-0468D9957D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{044DC480-0C16-4499-B542-0468D9957D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{044DC480-0C16-4499-B542-0468D9957D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{044DC480-0C16-4499-B542-0468D9957D5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98BBEF6A-2C89-41B9-80EC-328E52CCB643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BBEF6A-2C89-41B9-80EC-328E52CCB643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BBEF6A-2C89-41B9-80EC-328E52CCB643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BBEF6A-2C89-41B9-80EC-328E52CCB643}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ECF3B28E-0681-4C36-9A69-817D7D291401} = {F729AB21-C0FB-4A66-9890-8A210E40C87A}
+		{1970E67B-38F6-4381-9FFA-F7505445E587} = {F729AB21-C0FB-4A66-9890-8A210E40C87A}
+		{680C81BD-6013-46AF-905A-AB1C05F9E2CC} = {F729AB21-C0FB-4A66-9890-8A210E40C87A}
+		{25C0A61E-8ED1-413B-997D-7ACFDE0E8F2E} = {2A1FD527-84FE-4D19-B05E-27C7D1A5964E}
+		{C05500B2-F371-4E5D-AA70-2C7558B2F238} = {2A1FD527-84FE-4D19-B05E-27C7D1A5964E}
+		{11D821DE-8B32-4323-A918-5F624FE66D2E} = {2449D657-AA44-4C66-8466-25DA649ACEEF}
+		{473A8209-C7F1-4B0A-9D2F-CF6FF61A2997} = {2449D657-AA44-4C66-8466-25DA649ACEEF}
+		{3FD60C3C-B7F8-438D-8AF7-85E50BF44DE6} = {FB570050-4AD6-42C3-AC7E-4BCCAED7A857}
+		{044DC480-0C16-4499-B542-0468D9957D5D} = {25C0A61E-8ED1-413B-997D-7ACFDE0E8F2E}
+	EndGlobalSection
+EndGlobal
