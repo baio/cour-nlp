@@ -2,205 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/h2-p.2.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/h2.2.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/h2.2/assignment/parse_dev.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/h2.2/assignment/parse_dev.key" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/h2.2/assignment/parse_test.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/h2.2/assignment/parse_train.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/h2.2/assignment/parse_train_vert.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/parsing2.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/h2.2/assignment/tree.example" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1-mr/NLP/Properties/AssemblyInfo.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1-mr/NLP/Dictionary.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/Eval/Eval.pyproj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1-mr/NLP/NLP.csproj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1-mr/NLP/PosTagger.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1-mr/NLP/WordsCounter.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1-mr/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/count_cfg_freq.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/h2.2/assignment/count_cfg_freq.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/cyk_decoder.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/eval_parser.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/h2.2/assignment/eval_parser.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/App_Data/gene.dev.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1/.idea/h1.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1/.idea/other.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/parse_dev.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/parse_dev.key" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/parse_test.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/parse_train.counts.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/parse_train.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/parse_train.rare.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/parse_train_vert.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/pretty_print_tree.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/h2.2/assignment/pretty_print_tree.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/rare.replacer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/submit.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/h2.2/assignment/submit.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw1/h1/.idea/testrunner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hw2/tree.example" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Reformat\Reformat.csproj" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\Reduce\Reduce.csproj" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\Reduce\WordsFilter.cs" afterPath="" />
-      <change type="DELETED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\Reduce\_Program.cs" afterPath="" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\App.config" afterPath="$PROJECT_DIR$/hw1/h1-cs/App.config" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\App_Data\gene.a.train" afterPath="$PROJECT_DIR$/hw1/h1-cs/App_Data/gene.a.train" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\App_Data\gene.count" afterPath="$PROJECT_DIR$/hw1/h1-cs/App_Data/gene.count" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\App_Data\gene.dev" afterPath="$PROJECT_DIR$/hw1/h1-cs/App_Data/gene.dev" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\App_Data\gene.key" afterPath="$PROJECT_DIR$/hw1/h1-cs/App_Data/gene.key" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\App_Data\gene.r.count" afterPath="$PROJECT_DIR$/hw1/h1-cs/App_Data/gene.r.count" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\App_Data\gene.test" afterPath="$PROJECT_DIR$/hw1/h1-cs/App_Data/gene.test" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\App_Data\gene.train" afterPath="$PROJECT_DIR$/hw1/h1-cs/App_Data/gene.train" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\App_Data\gene_dev.p1.out" afterPath="$PROJECT_DIR$/hw1/h1-cs/App_Data/gene_dev.p1.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\App_Data\gene_test.p1.out" afterPath="$PROJECT_DIR$/hw1/h1-cs/App_Data/gene_test.p1.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\NGram.cs" afterPath="$PROJECT_DIR$/hw1/h1-cs/NGram.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\NGramTagger.cs" afterPath="$PROJECT_DIR$/hw1/h1-cs/NGramTagger.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\Program.cs" afterPath="$PROJECT_DIR$/hw1/h1-cs/Program.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\Properties\AssemblyInfo.cs" afterPath="$PROJECT_DIR$/hw1/h1-cs/Properties/AssemblyInfo.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\h1-cs.csproj" afterPath="$PROJECT_DIR$/hw1/h1-cs/h1-cs.csproj" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-cs\h1-cs.sln" afterPath="$PROJECT_DIR$/hw1/h1-cs/h1-cs.sln" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Recount\App.config" afterPath="$PROJECT_DIR$/hw1/h1-mr/Recount/App.config" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Recount\App_Data\gene.counts" afterPath="$PROJECT_DIR$/hw1/h1-mr/Recount/App_Data/gene.counts" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Recount\App_Data\gene.counts.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/Recount/App_Data/gene.counts.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Recount\App_Data\gene.counts.rare" afterPath="$PROJECT_DIR$/hw1/h1-mr/Recount/App_Data/gene.counts.rare" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Recount\App_Data\gene.train" afterPath="$PROJECT_DIR$/hw1/h1-mr/Recount/App_Data/gene.train" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Recount\App_Data\gene.trained" afterPath="$PROJECT_DIR$/hw1/h1-mr/Recount/App_Data/gene.trained" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Recount\Program.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/Recount/Program.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Recount\Properties\AssemblyInfo.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/Recount/Properties/AssemblyInfo.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Recount\Recount.csproj" afterPath="$PROJECT_DIR$/hw1/h1-mr/Recount/Recount.csproj" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Reformat\App.config" afterPath="$PROJECT_DIR$/hw1/h1-mr/Reformat/App.config" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Reformat\App_Data\gene.dev.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/Reformat/App_Data/gene.dev.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Reformat\App_Data\gene.key" afterPath="$PROJECT_DIR$/hw1/h1-mr/Reformat/App_Data/gene.key" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Reformat\App_Data\gene.test" afterPath="$PROJECT_DIR$/hw1/h1-mr/Reformat/App_Data/gene.test" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Reformat\App_Data\gene.test.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/Reformat/App_Data/gene.test.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Reformat\App_Data\gene_dev.p2.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/Reformat/App_Data/gene_dev.p2.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Reformat\App_Data\gene_test.p2.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/Reformat/App_Data/gene_test.p2.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Reformat\Program.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/Reformat/Program.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Reformat\Properties\AssemblyInfo.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/Reformat/Properties/AssemblyInfo.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\App.config" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/App.config" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\App_Data\.idea\.name" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/App_Data/.idea/.name" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\App_Data\.idea\App_Data.iml" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/App_Data/.idea/App_Data.iml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\App_Data\.idea\encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\App_Data\.idea\misc.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/App_Data/.idea/misc.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\App_Data\.idea\modules.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/App_Data/.idea/modules.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\App_Data\.idea\scopes\scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\App_Data\.idea\vcs.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/App_Data/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\App_Data\.idea\workspace.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/App_Data/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\App_Data\gene.dev.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/App_Data/gene.dev.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\App_Data\gene.key.data" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/App_Data/gene.key.data" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\Program.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/Program.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\Properties\AssemblyInfo.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/Properties/AssemblyInfo.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\Scorer.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/Scorer.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Scorer\Scorer.csproj" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/Scorer.csproj" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\Reduce\App.config" afterPath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/App.config" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\Reduce\App_Data\gene.dev.data" afterPath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/App_Data/gene.dev.data" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\Reduce\App_Data\gene.dev.out" afterPath="$PROJECT_DIR$/hw2/data.txt" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\Reduce\App_Data\gene.play.data" afterPath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/App_Data/gene.play.data" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\Reduce\App_Data\gene.play.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/App_Data/gene.play.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\Reduce\App_Data\gene.test.data" afterPath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/App_Data/gene.test.data" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\Reduce\App_Data\gene.test.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/App_Data/gene.test.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\Reduce\Program.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/Program.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\Reduce\Properties\AssemblyInfo.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/Properties/AssemblyInfo.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Tagger\gene.map" afterPath="$PROJECT_DIR$/hw1/h1-mr/Tagger/gene.map" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Utils\Dictionary.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/Utils/Dictionary.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Utils\Properties\AssemblyInfo.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/Utils/Properties/AssemblyInfo.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\Utils\Utils.csproj" afterPath="$PROJECT_DIR$/hw1/h1-mr/Utils/Utils.csproj" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\WordsCount\Map\App.config" afterPath="$PROJECT_DIR$/hw1/h1-mr/WordsCount/Map/App.config" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\WordsCount\Map\App_Data\gene.src" afterPath="$PROJECT_DIR$/hw1/h1-mr/WordsCount/Map/App_Data/gene.src" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\WordsCount\Map\App_Data\gene.src.mapped" afterPath="$PROJECT_DIR$/hw1/h1-mr/WordsCount/Map/App_Data/gene.src.mapped" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\WordsCount\Map\Map.csproj" afterPath="$PROJECT_DIR$/hw1/h1-mr/WordsCount/Map/Map.csproj" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\WordsCount\Map\Program.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/WordsCount/Map/Program.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\WordsCount\Map\Properties\AssemblyInfo.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/WordsCount/Map/Properties/AssemblyInfo.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\WordsCount\Reduce\App.config" afterPath="$PROJECT_DIR$/hw1/h1-mr/WordsCount/Reduce/App.config" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\WordsCount\Reduce\App_Data\gene.src.mapped" afterPath="$PROJECT_DIR$/hw1/h1-mr/WordsCount/Reduce/App_Data/gene.src.mapped" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\WordsCount\Reduce\App_Data\gene.trained" afterPath="$PROJECT_DIR$/hw1/h1-mr/WordsCount/Reduce/App_Data/gene.trained" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\WordsCount\Reduce\Program.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/WordsCount/Reduce/Program.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\WordsCount\Reduce\Properties\AssemblyInfo.cs" afterPath="$PROJECT_DIR$/hw1/h1-mr/WordsCount/Reduce/Properties/AssemblyInfo.cs" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\WordsCount\Reduce\Reduce.csproj" afterPath="$PROJECT_DIR$/hw1/h1-mr/WordsCount/Reduce/Reduce.csproj" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\h1-mr.sln" afterPath="$PROJECT_DIR$/hw1/h1-mr/h1-mr.sln" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\h1-p.2.pdf" afterPath="$PROJECT_DIR$/hw1/h1-mr/h1-p.2.pdf" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\hmms-spring2013.pdf" afterPath="$PROJECT_DIR$/hw1/h1-mr/hmms-spring2013.pdf" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\lectures_tagging.pdf" afterPath="$PROJECT_DIR$/hw1/h1-mr/lectures_tagging.pdf" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\.idea\.name" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/.idea/.name" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\.idea\encodings.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/App_Data/.idea/encodings.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\.idea\h1.iml" afterPath="$PROJECT_DIR$/.idea/cour-nlp.iml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\.idea\misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\.idea\modules.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/.idea/modules.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\.idea\other.xml" afterPath="$PROJECT_DIR$/.idea/other.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\.idea\scopes\scope_settings.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/Scorer/App_Data/.idea/scopes/scope_settings.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\.idea\testrunner.xml" afterPath="$PROJECT_DIR$/.idea/testrunner.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\.idea\vcs.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\.idea\workspace.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\count_freqs.py" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/count_freqs.py" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\eval_gene_tagger.py" afterPath="$PROJECT_DIR$/hw1/h1/eval_gene_tagger.py" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene.a.counts" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene.a.counts" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene.a.train" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene.a.train" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene.counts" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene.counts" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene.dev" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene.dev" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene.dev.1" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene.dev.1" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene.key" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene.key" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene.key.1" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene.key.1" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene.test" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene.test" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene.train" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene.train" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene_dev.1.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene_dev.1.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene_dev.p1.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene_dev.p1.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene_dev.p2.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene_dev.p2.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene_test.p1.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene_test.p1.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\gene_test.p2.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/gene_test.p2.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\h1-p.2.pdf" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/h1-p.2.pdf" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\py_source\submit.py" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/submit.py" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\readme.md" afterPath="$PROJECT_DIR$/hw1/h1-mr/readme.md" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1-mr\some.txt" afterPath="$PROJECT_DIR$/hw1/h1-mr/some.txt" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\.idea\.name" afterPath="$PROJECT_DIR$/hw1/h1/.idea/.name" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\.idea\encodings.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/.idea/encodings.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\.idea\h1.iml" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/.idea/h1.iml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\.idea\misc.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/.idea/misc.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\.idea\modules.xml" afterPath="$PROJECT_DIR$/hw1/h1/.idea/modules.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\.idea\other.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/.idea/other.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\.idea\scopes\scope_settings.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/.idea/scopes/scope_settings.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\.idea\testrunner.xml" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/.idea/testrunner.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\.idea\vcs.xml" afterPath="$PROJECT_DIR$/hw1/h1/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\.idea\workspace.xml" afterPath="$PROJECT_DIR$/hw1/h1/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\count_freqs.py" afterPath="$PROJECT_DIR$/hw1/h1/count_freqs.py" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\eval_gene_tagger.py" afterPath="$PROJECT_DIR$/hw1/h1-mr/py_source/eval_gene_tagger.py" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene.a.counts" afterPath="$PROJECT_DIR$/hw1/h1/gene.a.counts" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene.a.train" afterPath="$PROJECT_DIR$/hw1/h1/gene.a.train" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene.counts" afterPath="$PROJECT_DIR$/hw1/h1/gene.counts" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene.dev" afterPath="$PROJECT_DIR$/hw1/h1/gene.dev" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene.dev.1" afterPath="$PROJECT_DIR$/hw1/h1/gene.dev.1" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene.key" afterPath="$PROJECT_DIR$/hw1/h1/gene.key" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene.key.1" afterPath="$PROJECT_DIR$/hw1/h1/gene.key.1" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene.test" afterPath="$PROJECT_DIR$/hw1/h1/gene.test" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene.train" afterPath="$PROJECT_DIR$/hw1/h1/gene.train" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene_dev.1.out" afterPath="$PROJECT_DIR$/hw1/h1/gene_dev.1.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene_dev.p1.out" afterPath="$PROJECT_DIR$/hw1/h1/gene_dev.p1.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene_test.p1.out" afterPath="$PROJECT_DIR$/hw1/h1/gene_test.p1.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\gene_test.p2.out" afterPath="$PROJECT_DIR$/hw1/h1/gene_test.p2.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\h1-p.2.pdf" afterPath="$PROJECT_DIR$/hw1/h1/h1-p.2.pdf" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\h1\submit.py" afterPath="$PROJECT_DIR$/hw1/h1/submit.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/Reduce.csproj" afterPath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/Reduce.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw1/h1-mr/Reformat/Reformat.csproj" afterPath="$PROJECT_DIR$/hw1/h1-mr/Reformat/Reformat.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/App_Data/gene.counts.out" afterPath="$PROJECT_DIR$/hw1/h1-mr/Tagger/Reduce/App_Data/gene.counts.out" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\cyk_decoder.py" afterPath="$PROJECT_DIR$/hw2/part2.py" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\data.txt" afterPath="$PROJECT_DIR$/hw2/data/data.txt" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\h2-p.2.pdf" afterPath="$PROJECT_DIR$/hw2/docs/h2-p.2.pdf" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\h2.2.zip" afterPath="$PROJECT_DIR$/hw2/bkp/h2.2.zip" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_dev.dat" afterPath="$PROJECT_DIR$/hw2/data/parse_dev.dat" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_dev.key" afterPath="$PROJECT_DIR$/hw2/data/parse_dev.key" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_test.dat" afterPath="$PROJECT_DIR$/hw2/data/parse_test.dat" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_train.counts.out" afterPath="$PROJECT_DIR$/hw2/data/parse_train.counts.out" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_train.dat" afterPath="$PROJECT_DIR$/hw2/data/parse_train.dat" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_train.rare.dat" afterPath="$PROJECT_DIR$/hw2/data/parse_train.rare.dat" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_train_vert.dat" afterPath="$PROJECT_DIR$/hw2/data/parse_train_vert.dat" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parsing2.pdf" afterPath="$PROJECT_DIR$/hw2/docs/parsing2.pdf" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\rare.replacer.py" afterPath="$PROJECT_DIR$/hw2/part1.py" />
+      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\tree.example" afterPath="$PROJECT_DIR$/hw2/data/tree.example" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cour-nlp.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365337333346" ignored="false" />
+    <file path="/Dummy.txt" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365346150025" ignored="false" />
     <file path="/_rare.replacer.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1364990636128" ignored="false" />
-    <file path="/fragment.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365068116548" ignored="false" />
+    <file path="/fragment.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365345161592" ignored="false" />
     <file path="/rare.replacer.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1364993068918" ignored="false" />
     <file path="/cyk_decoder.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365078882612" ignored="false" />
-    <file path="/Python Console" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365070666437" ignored="false" />
+    <file path="/Python Console" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365344097006" ignored="false" />
+    <file path="/part2.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365346030165" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,28 +43,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cyk_decoder.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hw2/cyk_decoder.py">
+      <file leaf-file-name="part2.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hw2/part2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="25" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reduce.csproj.user" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/h1-mr/Tagger/Reduce/Reduce.csproj.user">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rare.replacer.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hw2/rare.replacer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="30" selection-start="695" selection-end="721" vertical-scroll-proportion="0.0">
+            <state line="80" column="0" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.8244406">
               <folding />
             </state>
           </provider>
@@ -265,6 +73,7 @@
         <option value="$PROJECT_DIR$/hw2/_rare.replacer.py" />
         <option value="$PROJECT_DIR$/hw2/rare.replacer.py" />
         <option value="$PROJECT_DIR$/hw2/cyk_decoder.py" />
+        <option value="$PROJECT_DIR$/hw2/part2.py" />
       </list>
     </option>
   </component>
@@ -328,7 +137,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hw1" />
+              <option name="myItemId" value="hw2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cour-nlp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cour-nlp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cour-nlp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cour-nlp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,42 +188,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="h1-mr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cour-nlp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cour-nlp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h1-mr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tagger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reduce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cour-nlp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cour-nlp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h1-cs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -390,8 +199,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hw2" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hw2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -403,10 +212,13 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\coursera\cour-nlp\hw2\data" />
+      <recent name="C:\dev\coursera\cour-nlp\hw2\docs" />
+      <recent name="C:\dev\coursera\cour-nlp\hw2\bkp" />
       <recent name="C:\dev\coursera\cour-nlp\hw1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.cyk_decoder">
+  <component name="RunManager" selected="Python.part2">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -480,7 +292,7 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="cyk_decoder" type="PythonConfigurationType" factoryName="Python">
+    <configuration default="false" name="part2" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -491,7 +303,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <module name="cour-nlp" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="cyk_decoder.py" />
+      <option name="SCRIPT_NAME" value="part2.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -501,7 +313,7 @@
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.hw2-rare.replacer" />
-      <item index="1" class="java.lang.String" itemvalue="Python.cyk_decoder" />
+      <item index="1" class="java.lang.String" itemvalue="Python.part2" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -539,11 +351,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26040554" sideWeight="0.618123" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38187703" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27588046" sideWeight="0.65550756" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38012958" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34951457" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34449244" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -608,29 +420,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/hw2/cyk_decoder.py</url>
-          <line>50</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="24" />
+      <option name="time" value="55" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hw2/rare.replacer.py">
+    <entry file="file://$PROJECT_DIR$/hw2/part1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="691" selection-end="751" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="37" column="0" selection-start="691" selection-end="751" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/rare.replacer.py">
+    <entry file="file://$PROJECT_DIR$/hw2/part1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm20/system/python_stubs/-762174762/__builtin__.py">
@@ -643,17 +444,17 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.20588236" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/parse_dev.key">
+    <entry file="file://$PROJECT_DIR$/hw2/data/parse_dev.key">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/data.txt">
+    <entry file="file://$PROJECT_DIR$/hw2/data/data.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/parse_train.dat">
+    <entry file="file://$PROJECT_DIR$/hw2/data/parse_train.dat">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="105" selection-start="885" selection-end="885" vertical-scroll-proportion="0.09026549" />
       </provider>
@@ -668,43 +469,39 @@
         <state line="19" column="28" selection-start="388" selection-end="388" vertical-scroll-proportion="-3.735294" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hw2/part1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="392" selection-end="392" vertical-scroll-proportion="0.43444446" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hw2/count_cfg_freq.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="29" selection-start="857" selection-end="857" vertical-scroll-proportion="-0.2647059" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/parse_train.rare.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="76" selection-start="2967" selection-end="2967" vertical-scroll-proportion="0.030088495" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/parse_train.counts.out">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="702" column="12" selection-start="17192" selection-end="17202" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/rare.replacer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="30" selection-start="695" selection-end="721" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/parse_dev.dat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/cyk_decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="25" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="58" column="21" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.60333335" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/h1-mr/Tagger/Reduce/Reduce.csproj.user">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2/data/parse_train.rare.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="76" selection-start="2967" selection-end="2967" vertical-scroll-proportion="0.03364486" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2/data/parse_dev.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="62" selection-start="0" selection-end="62" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2/data/parse_train.counts.out">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="11" selection-start="1734" selection-end="1743" vertical-scroll-proportion="-17.16" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2/part2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="0" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.8244406">
           <folding />
         </state>
       </provider>
