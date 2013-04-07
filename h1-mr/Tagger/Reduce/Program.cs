@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Utils;
 
@@ -106,8 +107,27 @@ namespace Map
                                     }
                                     else
                                     {
+                                        var modifyer = "RARE";
+
+                                        if (Regex.IsMatch(word, "\\d+"))
+                                        {
+                                            modifyer = "NUMERIC";
+                                        }
+                                        else if (word.ToUpper() == word)
+                                        {
+                                            modifyer = "ALL_CAPITAL";
+                                        }
+                                        else if (word.Last().ToString().ToUpper() == word.Last().ToString())
+                                        {
+                                            modifyer = "LAST_CAPITAL";
+                                        }
+                                        else
+                                        {
+                                            modifyer = "RARE";
+                                        }
+
                                         //not exist in dictionary => it is rare
-                                        cnt_word_y = trainedWordsCount.GetSafely("_RARE_ " + v);
+                                        cnt_word_y = trainedWordsCount.GetSafely(string.Format("_RARE_{0}_ ", modifyer) + v);
                                     }
                                 }
 

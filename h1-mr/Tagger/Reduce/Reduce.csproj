@@ -42,11 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <None Include="App_Data\gene.counts.out" />
+    <None Include="App_Data\gene.counts.many.rare" />
+    <None Include="App_Data\gene.counts.rare" />
     <None Include="App_Data\gene.dev.out" />
+    <None Include="App_Data\gene.dev.rare.many.out" />
     <None Include="App_Data\gene.play.data" />
     <None Include="App_Data\gene.play.out" />
     <None Include="App_Data\gene.test.out" />
+    <None Include="App_Data\gene.test.rare.many.out" />
     <None Include="_Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WordsFilter.cs" />

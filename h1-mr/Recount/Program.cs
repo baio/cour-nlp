@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Utils;
 
@@ -108,8 +109,35 @@ namespace Recount
                 }
             }
 
+            var rares = rareWords.GroupBy(p => { 
+                if (Regex.IsMatch(p.word, "\\d+"))
+                {
+                    return "NUMERIC";
+                }
+                else if (p.word.ToUpper() == p.word)
+                {
+                    return "ALL_CAPITAL";
+                }
+                else if (p.word.Last().ToString().ToUpper() == p.word.Last().ToString())
+                {
+                    return "LAST_CAPITAL";
+                }
+                else
+                {
+                    return "RARE";
+                }
+            });
+
+            foreach (var rare in rares)
+            {
+                Console.WriteLine(string.Format("_RARE_{0}_ O WORDTAG\t{1}", rare.Key, rare.Sum(p => p.cntO)));
+                Console.WriteLine(string.Format("_RARE_{0}_ I-GENE WORDTAG\t{1}", rare.Key, rare.Sum(p => p.cntG)));            
+            }
+
+            /*
             Console.WriteLine(string.Format("_RARE_ O WORDTAG\t{0}", rareWords.Sum(p => p.cntO)));
             Console.WriteLine(string.Format("_RARE_ I-GENE WORDTAG\t{0}", rareWords.Sum(p => p.cntG)));
+             */
 
             foreach (var kvp in ngrams.OrderBy(p => p.Key).OrderByDescending(p => p.Value))
             {
