@@ -14,8 +14,11 @@ Due Date 15 Apr
 
 [Parser Context Free Grammars (PCFGs) & Lexicalized PCFGs](https://class.coursera.org/nlangp-001/assignment/view?assignment_id=5)
 
+[Forum (debug)](https://class.coursera.org/nlangp-001/forum/thread?thread_id=691)
+
 Notes:
 
 + The last part is optional but we encourage interested students to give it a try.
 
 + Expected development total F1-Scores are 0.79 for part 2 and 0.83 for part 3.
+
