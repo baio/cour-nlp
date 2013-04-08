@@ -2,31 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\cyk_decoder.py" afterPath="$PROJECT_DIR$/hw2/part2.py" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\data.txt" afterPath="$PROJECT_DIR$/hw2/data/data.txt" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\h2-p.2.pdf" afterPath="$PROJECT_DIR$/hw2/docs/h2-p.2.pdf" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\h2.2.zip" afterPath="$PROJECT_DIR$/hw2/bkp/h2.2.zip" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_dev.dat" afterPath="$PROJECT_DIR$/hw2/data/parse_dev.dat" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_dev.key" afterPath="$PROJECT_DIR$/hw2/data/parse_dev.key" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_test.dat" afterPath="$PROJECT_DIR$/hw2/data/parse_test.dat" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_train.counts.out" afterPath="$PROJECT_DIR$/hw2/data/parse_train.counts.out" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_train.dat" afterPath="$PROJECT_DIR$/hw2/data/parse_train.dat" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_train.rare.dat" afterPath="$PROJECT_DIR$/hw2/data/parse_train.rare.dat" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parse_train_vert.dat" afterPath="$PROJECT_DIR$/hw2/data/parse_train_vert.dat" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\parsing2.pdf" afterPath="$PROJECT_DIR$/hw2/docs/parsing2.pdf" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\rare.replacer.py" afterPath="$PROJECT_DIR$/hw2/part1.py" />
-      <change type="MOVED" beforePath="C:\dev\coursera\cour-nlp\hw2\tree.example" afterPath="$PROJECT_DIR$/hw2/data/tree.example" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw2/part2.py" afterPath="$PROJECT_DIR$/hw2/part2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cour-nlp.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365346150025" ignored="false" />
+    <file path="/Dummy.txt" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365421359324" ignored="false" />
     <file path="/_rare.replacer.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1364990636128" ignored="false" />
-    <file path="/fragment.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365345161592" ignored="false" />
+    <file path="/fragment.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365427863234" ignored="false" />
     <file path="/rare.replacer.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1364993068918" ignored="false" />
     <file path="/cyk_decoder.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365078882612" ignored="false" />
     <file path="/Python Console" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365344097006" ignored="false" />
-    <file path="/part2.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365346030165" ignored="false" />
+    <file path="/part2.py" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365427770766" ignored="false" />
+    <file path="/readme.md" changelist="4d0c5cc9-4f05-4a12-b780-1074a59d4d27" time="1365421812614" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +35,25 @@
       <file leaf-file-name="part2.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw2/part2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="0" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.8244406">
+            <state line="61" column="44" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.5355191">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parse_dev.dat" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw2/data/parse_dev.dat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="62" selection-start="0" selection-end="62" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parse_train.counts.out" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw2/data/parse_train.counts.out">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="529" column="25" selection-start="12576" selection-end="12576" vertical-scroll-proportion="-13.76">
               <folding />
             </state>
           </provider>
@@ -73,6 +80,7 @@
         <option value="$PROJECT_DIR$/hw2/_rare.replacer.py" />
         <option value="$PROJECT_DIR$/hw2/rare.replacer.py" />
         <option value="$PROJECT_DIR$/hw2/cyk_decoder.py" />
+        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/hw2/part2.py" />
       </list>
     </option>
@@ -109,6 +117,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -177,30 +186,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cour-nlp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cour-nlp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="h1-mr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/hw2" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -344,18 +338,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27588046" sideWeight="0.65550756" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38012958" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27908218" sideWeight="0.6202805" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37971953" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34449244" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34412083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -420,7 +414,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="55" />
+      <option name="time" value="62" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -479,29 +473,35 @@
         <state line="58" column="21" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.60333335" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/h1-mr/Tagger/Reduce/Reduce.csproj.user">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hw2/data/parse_train.rare.dat">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="76" selection-start="2967" selection-end="2967" vertical-scroll-proportion="0.03364486" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw2/data/parse_dev.dat">
+    <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="62" selection-start="0" selection-end="62" vertical-scroll-proportion="0.0" />
+        <state line="11" column="0" selection-start="253" selection-end="253" vertical-scroll-proportion="0.20754717">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hw2/data/parse_train.counts.out">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="11" selection-start="1734" selection-end="1743" vertical-scroll-proportion="-17.16" />
+        <state line="529" column="25" selection-start="12576" selection-end="12576" vertical-scroll-proportion="-13.76">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw2/data/parse_dev.dat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="62" selection-start="0" selection-end="62" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hw2/part2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="1905" selection-end="1905" vertical-scroll-proportion="0.8244406">
+        <state line="61" column="44" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.5355191">
           <folding />
         </state>
       </provider>

@@ -53,6 +53,7 @@ def parse_sent(sent):
     words = sent.split()
     n = len(words)
     N = G["N"]
+    R = G["R"]
 
     pi = [[dict(zip(N.keys(), [0] * len(N))) for j in xrange(n)] for i in xrange(n)]
 
@@ -60,20 +61,21 @@ def parse_sent(sent):
         for X in N:
             pi[i][i][X] = q_X_w(X, words[i])
 
-    for l in xrange(n):
-        for i in xrange(n - l):
+    for l in range(1, n):
+        for i in range(1, n - l):
             j = i + l
             for X in N:
-                for Y in N:
-                    for Z in N:
-                        for s in range(i, j):
-                            pi[i][j][X] = q_X_YZ(X, Y, Z) * pi[i][s][Y] * pi[s + 1][j][Z]
+                for rule in [t for t in R.keys() if t[0] == X and len(t) == 3]:
+                    Y = rule[1]
+                    Z = rule[2]
+                    for s in range(i, j):
+                        pi[i][j][X] = q_X_YZ(X, Y, Z) * pi[i][s][Y] * pi[s + 1][j][Z]
 
     print pi
 
 init("data/parse_train.counts.out")
 
-parse_sent("What was")
+parse_sent("What was the monetary value of the Nobel Peace Prize in 1989 ?")
 """
 for sent in open("data/parse_dev.dat"):
     break
