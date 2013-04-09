@@ -1,0 +1,38 @@
+["SBARQ",
+
+["WHNP+PRON", "What"],
+
+["SBARQ",
+
+    [
+
+    ["SQ",
+
+
+        ["VERB", "are"],
+        ["NP+NOUN", "geckos"]
+
+    ],
+
+    [".", "?"]
+
+    ]
+]
+]
+
+[SBARQ,
+
+[WHNP+PRON, What],
+
+[SBARQ,
+     [
+        SQ,
+        [VERB, are],
+        [NP+NOUN, geckos]
+      ],
+
+     [., ?]
+
+     ]
+
+    ]

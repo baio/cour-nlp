@@ -74,11 +74,13 @@ def iter_bp(bp, sent, start, end, bp_iter):
     if s == start:
         ret_1 = [tag_left, sent[start]]
     else:
-        ret_1 = [tag_left, iter_bp(bp, sent, start, s, bp_left)]
+        ret = iter_bp(bp, sent, start, s, bp_left)
+        ret_1 = [tag_left, ret[0], ret[1]]
     if s + 1 == end:
         ret_2 = [tag_right, sent[end]]
     else:
-        ret_2 = [tag_right, iter_bp(bp, sent, s + 1, end, bp_right)]
+        ret = iter_bp(bp, sent, s + 1, end, bp_right)
+        ret_2 = [tag_right, ret[0], ret[1]]
     return [ret_1, ret_2]
 
 def parse_sent(sent):
@@ -120,7 +122,7 @@ def parse_sent(sent):
             #print_bp(bp, i, j)
 
     #move along with back pointers
-    pi_max = max(pi[0][n - 1].iteritems(), key=operator.itemgetter(1))
+    pi_max = max(filter(lambda (key, val): key  == "SBARQ", pi[0][n - 1].iteritems()), key=operator.itemgetter(1))
     bp_max = bp[0][n - 1][pi_max[0]]
     #print pi_max
     #print bp_max
@@ -135,8 +137,8 @@ init("data/parse_train.counts.out")
 #tree = parse_sent("What are geckos ?")
 #pretty_print_tree.pretty_print_tree(json.dumps(tree))
 
-with open("data/parse_dev.out", "w") as f:
-    for sent in open("data/test.dat"):
+with open("data/parse_test.p2.out", "w") as f:
+    for sent in open("data/parse_test.dat"):
         tree = parse_sent(sent)
         json.dump(tree, f)
         f.write("\n")
