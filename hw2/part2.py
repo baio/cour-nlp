@@ -1,6 +1,10 @@
 __author__ = 'baio'
 
 import sys
+import copy
+import operator
+import json
+from hw2 import pretty_print_tree
 
 G = None
 
@@ -54,6 +58,29 @@ def print_pi(pi, i, j):
             print "pi({},{},{})={:e}".format(i, j, k, v)
     print "\n"
 
+def print_bp(pi, i, j):
+    for k, v in pi[i][j].iteritems():
+        if v != 0:
+            print "bp({},{},{})={}, {}".format(i, j, k, v[0], v[1])
+    print "\n"
+
+def iter_bp(bp, sent, start, end, bp_iter):
+    s = bp_iter[1]
+    tag_left = bp_iter[0][1]
+    tag_right = bp_iter[0][2]
+    bp_left = bp[start][s][tag_left]
+    bp_right = bp[s + 1][end][tag_right]
+
+    if s == start:
+        ret_1 = [tag_left, sent[start]]
+    else:
+        ret_1 = [tag_left, iter_bp(bp, sent, start, s, bp_left)]
+    if s + 1 == end:
+        ret_2 = [tag_right, sent[end]]
+    else:
+        ret_2 = [tag_right, iter_bp(bp, sent, s + 1, end, bp_right)]
+    return [ret_1, ret_2]
+
 def parse_sent(sent):
 
     #initialization
@@ -63,15 +90,18 @@ def parse_sent(sent):
     R = G["R"]
 
     pi = [[dict(zip(N.keys(), [0] * len(N))) for j in xrange(n)] for i in xrange(n)]
+    bp = copy.deepcopy(pi)
 
     for i in xrange(n):
         for X in N:
             pi[i][i][X] = q_X_w(X, words[i])
 
 
+    """
     print_pi(pi, 0, 0)
     print_pi(pi, 1, 1)
     print_pi(pi, 2, 2)
+    """
 
 
     for l in range(1, n):
@@ -85,14 +115,32 @@ def parse_sent(sent):
                         pi_max = q_X_YZ(X, Y, Z) * pi[i][s][Y] * pi[s + 1][j][Z]
                         if pi_max > pi[i][j][X]:
                             pi[i][j][X] = pi_max
-            print_pi(pi, i, j)
+                            bp[i][j][X] = (rule, s)
+            #print_pi(pi, i, j)
+            #print_bp(bp, i, j)
+
+    #move along with back pointers
+    pi_max = max(pi[0][n - 1].iteritems(), key=operator.itemgetter(1))
+    bp_max = bp[0][n - 1][pi_max[0]]
+    #print pi_max
+    #print bp_max
+    tree = iter_bp(bp, words, 0, n - 1, bp_max)
+    return [pi_max[0], tree[0], tree[1]]
+
 
 init("data/parse_train.counts.out")
 
 #parse_sent("What was the monetary value of the Nobel Peace Prize in 1989 ?")
-#parse_sent("What are geckos ?")
 #parse_sent("How many miles is it from London , England to Plymouth , England ?")
-"""
-for sent in open("data/parse_dev.dat"):
-    break
-"""
+#tree = parse_sent("What are geckos ?")
+#pretty_print_tree.pretty_print_tree(json.dumps(tree))
+
+with open("data/parse_dev.out", "w") as f:
+    for sent in open("data/test.dat"):
+        tree = parse_sent(sent)
+        json.dump(tree, f)
+        f.write("\n")
+
+
+
+
