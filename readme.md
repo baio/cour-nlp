@@ -22,3 +22,15 @@ Notes:
 
 + Expected development total F1-Scores are 0.79 for part 2 and 0.83 for part 3.
 
+#hw 3#
+Due Date 1 May
+
+[Translation Alignment](https://class.coursera.org/nlangp-001/assignment/view?assignment_id=7)
+
+[Forum](https://class.coursera.org/nlangp-001/forum/thread?thread_id=940)
+
+Notes:
+
++ Note: The last part is optional but we encourage interested students to give it a try.
+
++ he expected development F-Scores are 0.420, 0.449, and a basic intersection alignment should give 0.485 for the last part.
