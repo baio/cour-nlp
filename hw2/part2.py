@@ -130,15 +130,15 @@ def parse_sent(sent):
     return [pi_max[0], tree[0], tree[1]]
 
 
-init("data/parse_train.counts.out")
+init("data/cfg_vert.rare.counts")
 
 #parse_sent("What was the monetary value of the Nobel Peace Prize in 1989 ?")
 #parse_sent("How many miles is it from London , England to Plymouth , England ?")
 #tree = parse_sent("What are geckos ?")
 #pretty_print_tree.pretty_print_tree(json.dumps(tree))
 
-with open("data/parse_test.p2.out", "w") as f:
-    for sent in open("data/parse_test.dat"):
+with open("data/parse_dev.p3.out", "w") as f:
+    for sent in open("data/parse_dev.dat"):
         tree = parse_sent(sent)
         json.dump(tree, f)
         f.write("\n")

@@ -2,8 +2,8 @@ __author__ = 'baio'
 
 import json
 
-data_file = "./parse_train.dat"
-data_file_rare = "./parse_train.rare.dat"
+data_file = "data/parse_train_vert.dat"
+data_file_rare = "data/parse_train_vert.rare.dat"
 
 is_array = lambda var: isinstance(var, (list, tuple))
 
