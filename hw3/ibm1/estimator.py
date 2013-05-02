@@ -43,18 +43,22 @@ def align_lines(e, f, iter_count=5):
                 count_e_f[(e_w, f_w)] += 1
     for e_w in count_e:
         t_e[e_w] = count_e[e_w]
-        for e_f_w in filter(lambda x: x[0] == e_w, count_e_f):
-            t_e_f[(e_w, f_w)] = count_e_f[e_f_w]  / count_e[e_w]
+        n_e = filter(lambda x: x[0] == e_w, count_e_f)
+        for e_f_w in n_e:
+            f_w = e_f_w[1]
+            if e_w not in t_e_f:
+                t_e_f[e_w] = dict()
+            t_e_f[e_w][f_w] = 1 / float(len(n_e))
     """initialization / end"""
 
     def t_f_given_e(e_w, f_w):
-        t_e_f[(e_w, f_w)] / float(t_e[e_w])
+        return t_e_f[e_w][f_w] / float(t_e[e_w])
 
     for t in xrange(iter_count):
+        """iter iter_count times, to converge to result"""
         count_e.clear()
         count_e_f.clear()
-        """iter iter_count times, to converge to result"""
-        for k in xrange(e):
+        for k in xrange(len(e)):
             """iter through lines (sentences)"""
             """english sentence"""
             e_s = e[k].split(' ')
@@ -73,7 +77,7 @@ def align_lines(e, f, iter_count=5):
                     """english word"""
                     e_w = e_s[j]
                     """calculate sigma"""
-                    sigma = t_f_given_e(e_w, f_w) / sum(lambda x: t_f_given_e(x, f_w), e_s)
+                    sigma = t_f_given_e(e_w, f_w) / sum(map(lambda x: t_f_given_e(x, f_w), e_s))
                     """update counts"""
                     count_e_f[(e_w, f_w)] += sigma
                     count_e[e_w] += sigma
@@ -81,5 +85,5 @@ def align_lines(e, f, iter_count=5):
         for e_w in count_e:
             t_e[e_w] = count_e[e_w]
             for e_f_w in filter(lambda x: x[0] == e_w, count_e_f):
-                t_e_f[e_w][e_f_w[1]] = count_e_f[e_f_w]  / count_e[e_w]
+                t_e_f[e_w][e_f_w[1]] = count_e_f[(e_w, e_f_w[1])]  / count_e[e_w]
     return t_e_f
