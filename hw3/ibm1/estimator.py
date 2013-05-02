@@ -49,6 +49,10 @@ def align_lines(e, f, iter_count=5):
             if e_w not in t_e_f:
                 t_e_f[e_w] = dict()
             t_e_f[e_w][f_w] = 1 / float(len(n_e))
+            if "NULL" not in t_e_f:
+                t_e_f["NULL"] = dict()
+            t_e_f["NULL"][f_w] = 1 / float(len(count_e))
+    t_e["NULL"] = len(count_e)
     """initialization / end"""
 
     def t_f_given_e(e_w, f_w):
@@ -61,7 +65,7 @@ def align_lines(e, f, iter_count=5):
         for k in xrange(len(e)):
             """iter through lines (sentences)"""
             """english sentence"""
-            e_s = e[k].split(' ')
+            e_s = ["NULL"] + e[k].split(' ')
             """foreign sentence"""
             f_s = f[k].split(' ')
             """english sentence length"""
@@ -93,7 +97,7 @@ def align_lines(e, f, iter_count=5):
         """
         res = []
         for k in xrange(len(e)):
-            e_s = e[k].split(' ')
+            e_s = ["NULL"] + e[k].split(' ')
             f_s = f[k].split(' ')
             """sentence align"""
             s_a = []
@@ -107,5 +111,5 @@ def align_lines(e, f, iter_count=5):
                     if max_t < t:
                         max_t = t
                         max_arg = e_i
-                s_a.append(max_arg + 1)
+                s_a.append(max_arg)
     return res
