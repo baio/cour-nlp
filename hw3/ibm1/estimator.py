@@ -86,4 +86,26 @@ def align_lines(e, f, iter_count=5):
             t_e[e_w] = count_e[e_w]
             for e_f_w in filter(lambda x: x[0] == e_w, count_e_f):
                 t_e_f[e_w][e_f_w[1]] = count_e_f[(e_w, e_f_w[1])]  / count_e[e_w]
-    return t_e_f
+
+        """
+        Calculate alignments max probabilities for each word in each sentence.
+        a(i) = arg max{j = 0..1} t(f(i)|e(j))
+        """
+        res = []
+        for k in xrange(len(e)):
+            e_s = e[k].split(' ')
+            f_s = f[k].split(' ')
+            """sentence align"""
+            s_a = []
+            res.append(s_a)
+            for f_w in f_s:
+                max_t = 0
+                max_arg = 0
+                for e_i in xrange(len(e_s)):
+                    e_w = e_s[e_i]
+                    t = t_e_f[e_w][f_w]
+                    if max_t < t:
+                        max_t = t
+                        max_arg = e_i
+                s_a.append(max_arg + 1)
+    return res
