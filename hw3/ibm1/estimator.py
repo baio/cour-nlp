@@ -32,34 +32,51 @@ def align_lines(e, f, iter_count=5):
     """
     t_e_f = dict()
     t_e = dict()
+    n_e = dict()
     count_e = defaultdict(int)
     count_e_f = defaultdict(int)
-
+    count_f = defaultdict(int)
     """initialization"""
     for i in xrange(len(e)):
         for e_w in e[i].split(' '):
             count_e[e_w] += 1
+            if e_w in n_e:
+                n = n_e[e_w]
+            else:
+                n = dict()
+                n_e[e_w] = n
             for f_w in f[i].split(' '):
+                #collect e / f unique words pair, for initialization
                 count_e_f[(e_w, f_w)] += 1
+                n[f_w] = 0
+    print "fuck yeah"
     for e_w in count_e:
         t_e[e_w] = count_e[e_w]
-        n_e = filter(lambda x: x[0] == e_w, count_e_f)
+        #n_e = filter(lambda x: x[0] == e_w, count_e_f)
         for e_f_w in n_e:
-            f_w = e_f_w[1]
+            f_w = e_f_w
+            n = len(n_e[e_f_w])
+            print e_f_w, n
+            count_f[f_w] += 1
             if e_w not in t_e_f:
                 t_e_f[e_w] = dict()
-            t_e_f[e_w][f_w] = 1 / float(len(n_e))
+            t_e_f[e_w][f_w] = 1 / float(n)
             if "NULL" not in t_e_f:
                 t_e_f["NULL"] = dict()
             t_e_f["NULL"][f_w] = 1 / float(len(count_e))
-    t_e["NULL"] = len(count_e)
+    """1 / number of distinct foreign word"""
+    t_e["NULL"] = 1 / float(len(count_f))
     """initialization / end"""
+
+    print "hu huuuuh"
 
     def t_f_given_e(e_w, f_w):
         return t_e_f[e_w][f_w] / float(t_e[e_w])
 
     for t in xrange(iter_count):
         """iter iter_count times, to converge to result"""
+        print "pedido | requested : " + t_e_f["requested"]["pedido"]
+        print "pregunta | question : " + t_e_f["question"]["pregunta"]
         count_e.clear()
         count_e_f.clear()
         for k in xrange(len(e)):
@@ -91,25 +108,27 @@ def align_lines(e, f, iter_count=5):
             for e_f_w in filter(lambda x: x[0] == e_w, count_e_f):
                 t_e_f[e_w][e_f_w[1]] = count_e_f[(e_w, e_f_w[1])]  / count_e[e_w]
 
-        """
-        Calculate alignments max probabilities for each word in each sentence.
-        a(i) = arg max{j = 0..1} t(f(i)|e(j))
-        """
-        res = []
-        for k in xrange(len(e)):
-            e_s = ["NULL"] + e[k].split(' ')
-            f_s = f[k].split(' ')
-            """sentence align"""
-            s_a = []
-            res.append(s_a)
-            for f_w in f_s:
-                max_t = 0
-                max_arg = 0
-                for e_i in xrange(len(e_s)):
-                    e_w = e_s[e_i]
-                    t = t_e_f[e_w][f_w]
-                    if max_t < t:
-                        max_t = t
-                        max_arg = e_i
-                s_a.append(max_arg)
+    return  t_e_f
+
+    """
+    Calculate alignments max probabilities for each word in each sentence.
+    a(i) = arg max{j = 0..1} t(f(i)|e(j))
+    """
+    res = []
+    for k in xrange(len(e)):
+        e_s = ["NULL"] + e[k].split(' ')
+        f_s = f[k].split(' ')
+        """sentence align"""
+        s_a = []
+        res.append(s_a)
+        for f_w in f_s:
+            max_t = 0
+            max_arg = 0
+            for e_i in xrange(len(e_s)):
+                e_w = e_s[e_i]
+                t = t_e_f[e_w][f_w]
+                if max_t < t:
+                    max_t = t
+                    max_arg = e_i
+            s_a.append(max_arg)
     return res
